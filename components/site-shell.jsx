@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { ArrowRight, ChevronDown, ChevronRight, Menu, X } from 'lucide-react'
 
@@ -30,9 +31,14 @@ const serviceMenu = [
 export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-3" aria-label="NikahHouse.com home">
-      <span className="flex size-10 items-center justify-center rounded-full border border-[#c9a96e]/60 text-[#c9a96e]">
-        <span className="font-serif text-xl">N</span>
-      </span>
+      <Image
+        src="/images/brand/nikah-house-mark.png"
+        alt=""
+        width={48}
+        height={48}
+        priority
+        className="size-11 object-contain"
+      />
       <span className="font-serif text-xl tracking-tight text-[#f8f4ed]">
         Nikah<span className="text-[#d7b878]">House</span>
         <span className="font-sans text-[10px] font-medium tracking-[0.18em] text-[#d7b878]">.COM</span>
