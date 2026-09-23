@@ -47,16 +47,17 @@ const serviceMenu = [
 
 export function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-3" aria-label="Nikah House home">
+    <Link href="/" className="flex min-w-[176px] items-center gap-3 sm:min-w-[196px]" aria-label="Nikah House home">
       <Image
         src="/images/brand/nikah-house-mark.png"
         alt=""
-        width={48}
-        height={48}
+        width={56}
+        height={56}
         priority
-        className="size-11 object-contain"
+        sizes="(max-width: 640px) 48px, 56px"
+        className="size-12 shrink-0 object-contain sm:size-14"
       />
-      <span className="font-serif text-xl tracking-tight text-[#f8f4ed]">
+      <span className="whitespace-nowrap font-serif text-[22px] tracking-tight text-[#f8f4ed] sm:text-2xl">
         Nikah <span className="text-[#d7b878]">House</span>
       </span>
     </Link>
