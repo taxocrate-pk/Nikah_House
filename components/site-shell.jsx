@@ -5,14 +5,21 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { ArrowRight, ChevronDown, ChevronRight, Menu, X } from 'lucide-react'
 
-const onlineNikahCountries = [
+const onlineNikahLocations = [
+  ['Karachi', '/online-nikah/karachi'],
+  ['Lahore', '/online-nikah/lahore'],
+  ['Islamabad', '/online-nikah/islamabad'],
+  ['Rawalpindi', '/online-nikah/rawalpindi'],
+  ['Faisalabad', '/online-nikah/faisalabad'],
+  ['Hyderabad', '/online-nikah/hyderabad'],
+  ['West Bengal', '/online-nikah/west-bengal'],
+  ['Pakistan', '/online-nikah/pakistan'],
   ['United Kingdom', '/online-nikah/united-kingdom'],
   ['United States', '/online-nikah/united-states'],
   ['Canada', '/online-nikah/canada'],
   ['Europe', '/online-nikah/europe'],
   ['Australia', '/online-nikah/australia'],
   ['UAE & Middle East', '/online-nikah/uae-middle-east'],
-  ['Pakistan', '/online-nikah/pakistan'],
 ]
 
 const courtMarriageCities = [
@@ -21,11 +28,23 @@ const courtMarriageCities = [
   ['Islamabad', '/court-marriage/islamabad'],
   ['Rawalpindi', '/court-marriage/rawalpindi'],
   ['Faisalabad', '/court-marriage/faisalabad'],
+  ['Hyderabad', '/court-marriage/hyderabad'],
+]
+
+const onlineMarriageLocations = [
+  ['Karachi', '/online-marriage/karachi'],
+  ['Lahore', '/online-marriage/lahore'],
+  ['Islamabad', '/online-marriage/islamabad'],
+  ['Rawalpindi', '/online-marriage/rawalpindi'],
+  ['Faisalabad', '/online-marriage/faisalabad'],
+  ['Hyderabad', '/online-marriage/hyderabad'],
+  ['West Bengal', '/online-marriage/west-bengal'],
 ]
 
 const serviceMenu = [
   ['Court Marriage', '/court-marriage/karachi', courtMarriageCities],
-  ['Online Nikah', '/online-nikah/pakistan', onlineNikahCountries],
+  ['Online Nikah', '/online-nikah/pakistan', onlineNikahLocations],
+  ['Online Marriage', '/online-marriage/karachi', onlineMarriageLocations],
 ]
 
 export function Logo() {
@@ -65,7 +84,7 @@ export function Header() {
                   <Link href={href} className="flex items-center justify-between rounded-lg px-4 py-3 hover:bg-white/10 hover:text-[#d7b878]">
                     {label} <ChevronRight className="size-4" />
                   </Link>
-                  <div className="invisible absolute left-full top-0 ml-2 w-64 rounded-xl border border-white/10 bg-[#142435] p-2 opacity-0 shadow-2xl transition group-hover/item:visible group-hover/item:opacity-100">
+                  <div className="invisible absolute left-full top-0 ml-2 max-h-[70vh] w-64 overflow-y-auto rounded-xl border border-white/10 bg-[#142435] p-2 opacity-0 shadow-2xl transition group-hover/item:visible group-hover/item:opacity-100">
                     {items.map(([name, itemHref]) => (
                       <Link key={itemHref} href={itemHref} className="block rounded-lg px-4 py-3 text-xs text-white/65 hover:bg-white/10 hover:text-[#d7b878]">
                         {name}
@@ -125,8 +144,8 @@ export function Footer() {
   return (
     <footer className="bg-[#101d2a] px-6 py-14 text-white lg:px-10">
       <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[1.4fr_1fr_1fr_1.4fr]">
-        <div><Logo /><p className="mt-6 max-w-xs text-sm leading-7 text-white/55">Professional Nikah, Online Nikah and marriage-documentation services for couples in Pakistan and overseas.</p></div>
-        <div><h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d7b878]">Services</h3><div className="mt-5 flex flex-col gap-3 text-sm text-white/60"><Link href="/online-nikah/pakistan">Online Nikah</Link><Link href="/court-marriage/karachi">Court Marriage</Link><Link href="/#services">All Services</Link></div></div>
+        <div><Logo /><p className="mt-6 max-w-xs text-sm leading-7 text-white/55">Professional Nikah, Online Nikah, Online Marriage and marriage-documentation services for couples in Pakistan and overseas.</p></div>
+        <div><h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d7b878]">Services</h3><div className="mt-5 flex flex-col gap-3 text-sm text-white/60"><Link href="/online-nikah/pakistan">Online Nikah</Link><Link href="/online-marriage/karachi">Online Marriage</Link><Link href="/court-marriage/karachi">Court Marriage</Link><Link href="/#services">All Services</Link></div></div>
         <div><h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d7b878]">Pakistan Offices</h3><div className="mt-5 flex flex-col gap-3 text-sm text-white/60">{courtMarriageCities.map(([city, href]) => <Link key={href} href={href}>{city}</Link>)}</div></div>
         <div><h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d7b878]">Important To Know</h3><p className="mt-5 text-sm leading-7 text-white/55">Islamic Nikah, civil registration and overseas recognition are distinct matters. Requirements vary by jurisdiction and circumstances. This website is not a substitute for case-specific legal advice.</p></div>
       </div>
