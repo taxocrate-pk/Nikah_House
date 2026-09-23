@@ -12,7 +12,6 @@ const onlineNikahLocations = [
   ['Rawalpindi', '/online-nikah/rawalpindi'],
   ['Faisalabad', '/online-nikah/faisalabad'],
   ['Hyderabad', '/online-nikah/hyderabad'],
-  ['West Bengal', '/online-nikah/west-bengal'],
   ['Pakistan', '/online-nikah/pakistan'],
   ['United Kingdom', '/online-nikah/united-kingdom'],
   ['United States', '/online-nikah/united-states'],
@@ -38,7 +37,6 @@ const onlineMarriageLocations = [
   ['Rawalpindi', '/online-marriage/rawalpindi'],
   ['Faisalabad', '/online-marriage/faisalabad'],
   ['Hyderabad', '/online-marriage/hyderabad'],
-  ['West Bengal', '/online-marriage/west-bengal'],
 ]
 
 const serviceMenu = [
