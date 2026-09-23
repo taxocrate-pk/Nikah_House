@@ -5,8 +5,8 @@ export default function Page() {
 }
 
 export const metadata = {
-  title: 'Nikah House | Professional Nikah Services in Pakistan & Overseas',
-  description: 'Professional Nikah, online Nikah and marriage-documentation guidance for couples in Pakistan and overseas.',
+  title: 'Nikah Services in Pakistan & Overseas | Nikah House',
+  description: 'Nikah services, online Nikah, Nikah Nama preparation and marriage documentation support in Pakistan and for overseas Pakistanis. Contact Nikah House.',
   keywords: ['Nikah services', 'online Nikah', 'Nikah in Pakistan', 'overseas Pakistani Nikah', 'Nikah Nama'],
   alternates: { canonical: 'https://nikahhouse.com' },
 }
