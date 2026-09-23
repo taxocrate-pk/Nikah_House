@@ -1,9 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { useState } from 'react'
 import { ArrowRight, ChevronDown, ChevronRight, Menu, X } from 'lucide-react'
+
+const originalNikahHouseLogo = 'https://nikahhouse.com/wp-content/uploads/2023/09/Nikkah_House_Logo_Opt_1-removebg-preview.png'
 
 const onlineNikahLocations = [
   ['Karachi', '/online-nikah/karachi'],
@@ -47,19 +48,14 @@ const serviceMenu = [
 
 export function Logo() {
   return (
-    <Link href="/" className="flex min-w-[176px] items-center gap-3 sm:min-w-[196px]" aria-label="Nikah House home">
-      <Image
-        src="/images/brand/nikah-house-mark.png"
-        alt=""
-        width={56}
-        height={56}
-        priority
-        sizes="(max-width: 640px) 48px, 56px"
-        className="size-12 shrink-0 object-contain sm:size-14"
+    <Link href="/" className="inline-flex shrink-0 items-center" aria-label="Nikah House home">
+      <img
+        src={originalNikahHouseLogo}
+        alt="Nikah House"
+        width="220"
+        height="72"
+        className="h-14 w-auto max-w-[190px] object-contain sm:h-16 sm:max-w-[220px]"
       />
-      <span className="whitespace-nowrap font-serif text-[22px] tracking-tight text-[#f8f4ed] sm:text-2xl">
-        Nikah <span className="text-[#d7b878]">House</span>
-      </span>
     </Link>
   )
 }
