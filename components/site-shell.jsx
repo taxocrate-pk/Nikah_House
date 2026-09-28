@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { ArrowRight, ChevronDown, ChevronRight, Menu, X } from 'lucide-react'
 
-const nikahHouseLogo = '/images/brand/nikah-house-mark.png'
+const nikahHouseLogo = '/images/brand/online-nikah-services-logo.svg'
 
 const onlineNikahLocations = [
   ['Karachi', '/online-nikah/karachi'],
@@ -48,15 +48,14 @@ const serviceMenu = [
 
 export function Logo() {
   return (
-    <Link href="/" className="inline-flex shrink-0 items-center gap-3" aria-label="Nikah House home">
+    <Link href="/" className="inline-flex shrink-0 items-center" aria-label="Nikah House home">
       <img
         src={nikahHouseLogo}
-        alt=""
-        width="56"
-        height="56"
-        className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+        alt="Online Nikah Services"
+        width="365"
+        height="522"
+        className="h-16 w-auto object-contain sm:h-20"
       />
-      <span className="font-serif text-xl font-semibold tracking-wide text-white sm:text-2xl">Nikah House</span>
     </Link>
   )
 }
