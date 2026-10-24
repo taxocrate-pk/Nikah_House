@@ -7,11 +7,14 @@ export const metadata = {
   generator: 'v0.app',
   icons: {
     icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },
-      { url: '/icon-light-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48 64x64 128x128 256x256' },
+      { url: '/favicon-48x48.png', type: 'image/png', sizes: '48x48' },
+      { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
+      { url: '/favicon-192x192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/icon.svg', type: 'image/svg+xml', sizes: 'any' },
     ],
-    shortcut: '/icon-light-32x32.png',
-    apple: '/apple-icon.png',
+    shortcut: '/favicon.ico',
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
   },
 }
 
