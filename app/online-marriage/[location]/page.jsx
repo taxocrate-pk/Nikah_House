@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
   const { location } = await params
   const page = getOnlineMarriagePage(location)
   if (!page) return {}
-  const url = `https://nikahhouse.com/online-marriage/${location}`
+  const url = `https://www.nikahhouse.com/online-marriage/${location}`
   return {
     title: page.title,
     description: page.description,

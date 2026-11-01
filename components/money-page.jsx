@@ -40,9 +40,9 @@ export default function MoneyPage({ page }) {
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'WebPage', name: page.title, description: page.description, url: `https://nikahhouse.com${serviceUrl}` },
-      { '@type': 'LegalService', name: subject, serviceType: online ? 'Online Nikah Services' : 'Court Marriage Services', areaServed: page.areaServed, provider: { '@type': 'Organization', name: 'Nikah House', url: 'https://nikahhouse.com' }, description: page.description },
-      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nikahhouse.com' }, { '@type': 'ListItem', position: 2, name: subject, item: `https://nikahhouse.com${serviceUrl}` }] },
+      { '@type': 'WebPage', name: page.title, description: page.description, url: `https://www.nikahhouse.com${serviceUrl}` },
+      { '@type': 'LegalService', name: subject, serviceType: online ? 'Online Nikah Services' : 'Court Marriage Services', areaServed: page.areaServed, provider: { '@type': 'Organization', name: 'Nikah House', url: 'https://www.nikahhouse.com' }, description: page.description },
+      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.nikahhouse.com' }, { '@type': 'ListItem', position: 2, name: subject, item: `https://www.nikahhouse.com${serviceUrl}` }] },
       { '@type': 'FAQPage', mainEntity: faqs.map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } })) },
     ],
   }

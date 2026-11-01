@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
   const { country } = await params
   const page = getOnlineNikahPage(country)
   if (!page) return {}
-  const url = `https://nikahhouse.com/online-nikah/${country}`
+  const url = `https://www.nikahhouse.com/online-nikah/${country}`
   return { title: page.title, description: page.description, alternates: { canonical: url }, openGraph: { title: page.title, description: page.description, url, type: 'website' } }
 }
 

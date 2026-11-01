@@ -1,3 +1,3 @@
 export default function robots() {
-  return { rules: { userAgent: '*', allow: '/' }, sitemap: 'https://nikahhouse.com/sitemap.xml' }
+  return { rules: { userAgent: '*', allow: '/' }, sitemap: 'https://www.nikahhouse.com/sitemap.xml' }
 }
