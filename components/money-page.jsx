@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { ArrowRight, Check, ChevronDown, FileCheck2, HeartHandshake, ShieldCheck } from 'lucide-react'
 import { Footer, Header } from './site-shell'
 
+import { pageImage } from '@/lib/page-images'
+
 export default function MoneyPage({ page }) {
   const online = page.type === 'online'
   const subject = online ? `Online Nikah for ${page.place.name}` : `Court Marriage in ${page.place.name}`
@@ -53,7 +55,7 @@ export default function MoneyPage({ page }) {
       <Header />
       <main>
         <section className="relative isolate overflow-hidden bg-[#142435] px-6 pb-24 pt-40 lg:px-10 lg:pb-28 lg:pt-48">
-          <Image src={online ? '/images/nikah-hero.png' : '/images/nikah-ceremony.png'} alt={`${subject} service`} fill priority sizes="100vw" className="object-cover object-center opacity-35" />
+          <Image src={online ? '/images/nikah-hero.webp' : '/images/nikah-ceremony.webp'} alt={`${subject} service`} fill priority sizes="100vw" className="object-cover object-center opacity-35" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#142435] via-[#142435]/90 to-[#142435]/35" />
           <div className="relative mx-auto max-w-7xl">
             <nav aria-label="Breadcrumb" className="mb-10 flex gap-2 text-xs text-white/45"><Link href="/">Home</Link><span>/</span><span>{subject}</span></nav>
@@ -65,6 +67,8 @@ export default function MoneyPage({ page }) {
             </div>
           </div>
         </section>
+
+        {(() => { const im = pageImage(online ? 'online' : 'court', page.place.name); return <section className="px-6 pt-16 lg:px-10"><figure className="mx-auto max-w-5xl overflow-hidden rounded-2xl shadow-lg"><Image src={im.src} alt={im.alt} width={1200} height={800} sizes="(max-width: 1024px) 100vw, 1024px" className="h-auto w-full" /><figcaption className="bg-[#f7f3ec] px-5 py-3 text-sm text-[#5d6263]">{im.alt}</figcaption></figure></section> })()}
 
         <section className="px-6 py-20 lg:px-10"><div className="mx-auto grid max-w-7xl gap-px overflow-hidden rounded-2xl bg-[#d7d0c4] md:grid-cols-3">{[
           [online ? 'Service Scope' : 'Availability', online ? 'Online Nikah coordination for international and Pakistan-connected couples' : `Court Marriage service in ${page.place.name}, Pakistan`],
