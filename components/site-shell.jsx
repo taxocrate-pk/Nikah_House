@@ -144,7 +144,7 @@ export function Footer() {
         <div><h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d7b878]">Pakistan Offices</h3><div className="mt-5 flex flex-col gap-3 text-sm text-white/60">{courtMarriageCities.map(([city, href]) => <Link key={href} href={href}>{city}</Link>)}</div></div>
         <div><h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d7b878]">Important To Know</h3><p className="mt-5 text-sm leading-7 text-white/55">Islamic Nikah, civil registration and overseas recognition are distinct matters. Requirements vary by jurisdiction and circumstances. This website is not a substitute for case-specific legal advice.</p></div>
       </div>
-      <div className="mx-auto mt-14 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/35 sm:flex-row sm:justify-between"><span>© {new Date().getFullYear()} Nikah House. All rights reserved.</span><span>Confidential discussions · Case-specific service</span></div>
+      <div className="mx-auto mt-14 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/35 sm:flex-row sm:justify-between"><span>© 2022 Nikah House. All rights reserved.</span><span>Confidential discussions · Case-specific service</span></div>
     </footer>
   )
 }

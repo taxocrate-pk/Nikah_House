@@ -4,6 +4,7 @@ import { ArrowRight, Check, ChevronDown, FileCheck2, HeartHandshake, ShieldCheck
 import { Footer, Header } from './site-shell'
 
 import { pageImage } from '@/lib/page-images'
+import WhatsAppLink from '@/components/whatsapp-link'
 
 export default function MoneyPage({ page }) {
   const online = page.type === 'online'
@@ -63,7 +64,7 @@ export default function MoneyPage({ page }) {
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.28em] text-[#d7b878]">{page.eyebrow}</p>
               <h1 className="font-serif text-5xl leading-[1.04] tracking-tight md:text-7xl">{page.heading}</h1>
               <p className="mt-7 max-w-3xl text-lg leading-8 text-white/70">{page.intro}</p>
-              <Link href="/contact" className="mt-9 inline-flex items-center rounded-full bg-[#d7b878] px-6 py-3.5 font-semibold text-[#142435] transition hover:bg-[#e8cf99]">Discuss Your Case <ArrowRight className="ml-2 size-4" /></Link>
+              <WhatsAppLink className="mt-9 inline-flex items-center rounded-full bg-[#d7b878] px-6 py-3.5 font-semibold text-[#142435] transition hover:bg-[#e8cf99]">WhatsApp: Discuss Your Case <ArrowRight className="ml-2 size-4" /></WhatsAppLink>
             </div>
           </div>
         </section>
@@ -86,7 +87,7 @@ export default function MoneyPage({ page }) {
 
         <section className="px-6 py-24 lg:px-10"><div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.8fr_1.2fr]"><div><p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#ad8750]">Frequently Asked Questions</p><h2 className="mt-4 font-serif text-4xl leading-tight md:text-5xl">Questions About {subject}</h2></div><div className="divide-y divide-[#d7d0c4] border-y border-[#d7d0c4]">{faqs.map(([question, answer]) => <details key={question} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-serif text-xl"><span>{question}</span><ChevronDown className="size-5 shrink-0 text-[#ad8750] transition group-open:rotate-180" /></summary><p className="max-w-3xl pt-4 pr-8 leading-7 text-[#666b69]">{answer}</p></details>)}</div></div></section>
 
-        <section className="bg-[#d7b878] px-6 py-20 lg:px-10"><div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 md:flex-row md:items-center"><div><p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#536060]">Discuss Your Circumstances</p><h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight md:text-5xl">Start {subject} With A Confidential Case Review</h2></div><Link href="/contact" className="inline-flex shrink-0 items-center rounded-full bg-[#142435] px-6 py-4 font-semibold text-white transition hover:bg-[#20364a]">Contact Nikah House <ArrowRight className="ml-2 size-4" /></Link></div></section>
+        <section className="bg-[#d7b878] px-6 py-20 lg:px-10"><div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 md:flex-row md:items-center"><div><p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#536060]">Discuss Your Circumstances</p><h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight md:text-5xl">Start {subject} With A Confidential Case Review</h2></div><WhatsAppLink className="inline-flex shrink-0 items-center rounded-full bg-[#142435] px-6 py-4 font-semibold text-white transition hover:bg-[#20364a]">WhatsApp: Contact Nikah House <ArrowRight className="ml-2 size-4" /></WhatsAppLink></div></section>
       </main>
       <Footer />
     </div>
